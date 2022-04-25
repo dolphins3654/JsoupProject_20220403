@@ -16,8 +16,6 @@ public class JsoupProjectApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(JsoupProjectApplication.class, args).getBean(JsoupProjectApplication.class).run();
-
-
     }
 
     void run() {
@@ -35,8 +33,25 @@ public class JsoupProjectApplication {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    void run2() {
+        String url = "https://eomisae.co.kr";
+        log.info("check");
+        List<String> pages = Arrays.asList("fs","os","rt");
+        Document doc = null;
+        try {
+            for (String page: pages) {
+                doc = Jsoup.connect(url+"/"+page).get();
+                log.info(String.valueOf(doc.select(".card_content").select("a.pjax").html()));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    void run3() {
+        String url = "https://bbs.ruliweb.com/market/board/1020";
 
     }
 
