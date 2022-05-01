@@ -1,5 +1,5 @@
 spring:
-  datasource:
+  datasource: #jdbc:oracle:thin:@dolphins_high? 뒤에 오라클 클라우드에서 받은 전자지갑 경로 넣어줌
     url: jdbc:oracle:thin:@dolphins_high?TNS_ADMIN=/Users/gimgyeong-o/Desktop/Wallet_dolphins
     username: admin
     password: Qlalfqjsgh1!
