@@ -1,5 +1,6 @@
 package com.semo.jsoup.jsoupproject;
 
+import com.semo.oracle.OracleTest;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
